@@ -1,0 +1,32 @@
+.UserComponent {
+  display: flex;
+  font: 12px Helvetica;
+  color: #333;
+  max-width: 680px;
+  margin: auto;
+
+  .Avatar {
+    @component avatar;
+    padding-right: 16px;
+  }
+
+  .Details {
+    .Name {
+      font-size: 36px;
+      padding-bottom: 8px;
+      @component name;
+    }
+
+    .Extra {
+      font-size: 12px;
+      color: #999;
+      padding-bottom: 8px;
+      @component extra;
+    }
+
+    .Biography {
+      font-size: 14px;
+      @component biography;
+    }
+  }
+}

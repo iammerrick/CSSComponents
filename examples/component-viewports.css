@@ -1,0 +1,9 @@
+.MyComponent {
+  background-color: #FF0000;
+  @component children;
+
+  .Child {
+    @component icon;
+    font: 12px Helvetica;
+  }
+}
