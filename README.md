@@ -1,52 +1,5 @@
 # CSS Components
 
-CSS Components allows you to describe components completely in CSS. It uses nesting to to deterime DOM structure & automatically flattens and namespaces your CSS. It uses @rules to decide where certain properties should render to. It supports rendering to multiple frameworks, current React and Angular 2. 
-
-What if you could author shared component libraries and target multiple frameworks for first class APIs?
-
-Currently there is a ghetto CLI and a ghetto webpack loader for this proof of concept. This leverages PostCSS so adding additional post-processing plugins for the CSS would be fairly trivial.
-
-
-## The Concept
-
-```css
-.User {
-  background-color: #000;
-  color: #FFF;
-  @component children;
-}
-```
-
-This can then be used in your codebase: 
-
-```javascript
-import User from 'css-component!User.css';
-
-...
-<User>Hello World!</User>
-...
-
-```
-
-Compiles a component that will effectively render:
-
-```html
-<style>
-.HashedClassName {
-  background-color: #000;
-  color: #FFF;
-}
-</style>
-<div class="HashedClassName">
-  Hello World!
-</div>
-```
-
-It supports nesting, sibling elements and custom properties as well so you aren't stuck to just children. 
-
-
-## Example Component
-
 ![UserComponent](http://f.cl.ly/items/0s2x2x362p0O0K2L1828/Screen%20Shot%202016-06-17%20at%204.03.34%20PM.png)
 
 This component is authored completely in the CSS you see below.
@@ -96,6 +49,54 @@ However in your React codebase, it feels as if it is implemented first class.
   extra='Age 26 & Location Utah'
 />
 ```
+
+## Explain yourself!
+
+CSS Components allows you to describe components completely in CSS. It uses nesting to to deterime DOM structure & automatically flattens and namespaces your CSS. It uses @rules to decide where certain properties should render to. It supports rendering to multiple frameworks, current React and Angular 2. 
+
+What if you could author shared component libraries and target multiple frameworks for first class APIs?
+
+Currently there is a ghetto CLI and a ghetto webpack loader for this proof of concept. This leverages PostCSS so adding additional post-processing plugins for the CSS would be fairly trivial.
+
+
+## The Concept
+
+```css
+.User {
+  background-color: #000;
+  color: #FFF;
+  @component children;
+}
+```
+
+This can then be used in your codebase: 
+
+```javascript
+import User from 'css-component!User.css';
+
+...
+<User>Hello World!</User>
+...
+
+```
+
+Compiles a component that will effectively render:
+
+```html
+<style>
+.HashedClassName {
+  background-color: #000;
+  color: #FFF;
+}
+</style>
+<div class="HashedClassName">
+  Hello World!
+</div>
+```
+
+It supports nesting, sibling elements and custom properties as well so you aren't stuck to just children. 
+
+
 
 
 ## Supports Multiple Rendering Targets
