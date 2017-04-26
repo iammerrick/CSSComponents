@@ -56,7 +56,7 @@ CSS Components allows you to describe components completely in CSS. It uses nest
 
 What if you could author shared component libraries and target multiple frameworks for first class APIs?
 
-Currently there is a ghetto CLI and a ghetto webpack loader for this proof of concept. This leverages PostCSS so adding additional post-processing plugins for the CSS would be fairly trivial.
+Currently there is a shoddy CLI and a shoddy webpack loader for this proof of concept. This leverages PostCSS so adding additional post-processing plugins for the CSS would be fairly trivial.
 
 
 ## The Concept
